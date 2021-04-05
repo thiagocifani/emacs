@@ -1,5 +1,8 @@
+;;; package --- Summary
+;;; Commentary:
 (require 'cl)
 
+;;; Code:
 (defvar emacs-root (expand-file-name "~/.emacs.d/"))
 
 ;; add all the elisp directories under ~/.emacs.d to load path
@@ -51,3 +54,5 @@
  )
 (put 'erase-buffer 'disabled nil)
 
+(provide 'init)
+;;; init.el ends here
