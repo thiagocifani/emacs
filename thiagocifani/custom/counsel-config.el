@@ -1,18 +1,18 @@
 (use-package ivy
   :diminish
   :bind (("C-s" . swiper)
-	 :map ivy-minibuffer-map
-	 ("TAB" . ivy-alt-done)
-	 ("C-l" . ivy-alt-done)
-	 ("C-n" . ivy-next-line)
-	 ("C-p" . ivy-previous-line)
-	 :map ivy-switch-buffer-map
-	 ("C-p" . ivy-previous-line)
-	 ("C-l" . ivy-done)
-	 ("C-d" . ivy-switch-buffer-kill)
-	 :map ivy-reverse-i-search-map
-	 ("C-p" . ivy-previous-line)
-	 ("C-d" . ivy-reverse-i-search-kill))
+         :map ivy-minibuffer-map
+         ("TAB" . ivy-alt-done)
+         ("C-l" . ivy-alt-done)
+         ("C-n" . ivy-next-line)
+         ("C-p" . ivy-previous-line)
+         :map ivy-switch-buffer-map
+         ("C-p" . ivy-previous-line)
+         ("C-l" . ivy-done)
+         ("C-d" . ivy-switch-buffer-kill)
+         :map ivy-reverse-i-search-map
+         ("C-p" . ivy-previous-line)
+         ("C-d" . ivy-reverse-i-search-kill))
   :config
   (ivy-mode 1))
 
@@ -28,11 +28,6 @@
   (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
   :config
   (counsel-mode 1))
-
-(use-package counsel-projectile
-  :config (counsel-projectile-mode))
-
-;;; counsel-config.el ends here
 
 (use-package ivy-prescient
   :after counsel

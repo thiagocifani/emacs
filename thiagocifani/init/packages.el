@@ -1,10 +1,13 @@
+;;; package --- Summary
+;;; Commentary:
+
+;;; Code:
 (require 'cl)
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org"   . "https://orgmode.org/elpa/")
+                         ("elpa"  . "https://elpa.gnu.org/packages/")))
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
@@ -15,3 +18,7 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+
+(provide 'packages)
+
+;;; packages.el ends here

@@ -57,7 +57,7 @@
 
 (use-package lsp-ui :ensure t)
 
-(use-package company-lsp :commands company-lsp)
+;(use-package company-lsp :commands company-lsp)
 
 (use-package treemacs
   :ensure t
