@@ -9,7 +9,7 @@
     :commands (js2r-add-keybindings-with-prefix)
     :config
     (add-hook 'js2-mode-hook #'js2-refactor-mode)
-    (add-hook 'js2-mode-hook #'thiagocifani-tide-setup)
+    (add-hook 'js2-mode-hook #'dodecaphonic-tide-setup)
     (js2r-add-keybindings-with-prefix "C-c t"))
 
   (use-package add-node-modules-path
@@ -24,7 +24,7 @@
   :bind
   ("C-c , v" . jest-file)
   ("C-c , s" . jest-function)
-  ("C-c , t" . thiagocifani/jest-jump-between-test-and-impl))
+  ("C-c , t" . dodecaphonic/jest-jump-between-test-and-impl))
 
 (use-package tern
   :commands tern-mode

@@ -14,4 +14,4 @@
         (beginning-of-line))
       (while (looking-back "^\\s-*[^(=\n]+\\s-*=.*\n")
         (previous-line))
-      (dodecaphonic/align=))))
+      (thiagocifani/align=))))
