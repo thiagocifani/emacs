@@ -3,9 +3,10 @@
   :bind (("C-s" . swiper)
          :map ivy-minibuffer-map
          ("TAB" . ivy-alt-done)
-         ("C-l" . ivy-alt-done)
          ("C-n" . ivy-next-line)
          ("C-p" . ivy-previous-line)
+         ("C-j" . counsel-up-directory)
+         ("C-l" . counsel-down-directory)
          :map ivy-switch-buffer-map
          ("C-p" . ivy-previous-line)
          ("C-l" . ivy-done)
@@ -15,7 +16,6 @@
          ("C-d" . ivy-reverse-i-search-kill))
   :config
   (ivy-mode 1))
-
 (use-package ivy-rich
   :init
   (ivy-rich-mode 1))
