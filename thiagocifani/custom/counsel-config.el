@@ -5,8 +5,8 @@
          ("TAB" . ivy-alt-done)
          ("C-n" . ivy-next-line)
          ("C-p" . ivy-previous-line)
-         ("C-j" . counsel-up-directory)
-         ("C-l" . counsel-down-directory)
+         ("C-j" . counsel-down-directory)
+         ("C-l" . counsel-up-directory)
          :map ivy-switch-buffer-map
          ("C-p" . ivy-previous-line)
          ("C-l" . ivy-done)
