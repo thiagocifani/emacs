@@ -4,6 +4,7 @@
 
 ;;; Code:
 (defvar emacs-root (expand-file-name "~/.emacs.d/"))
+(setq default-directory "/Users/thiagocifani/projects")
 
 ;; add all the elisp directories under ~/.emacs.d to load path
 (labels ((add-path (p)
@@ -42,7 +43,7 @@
     ("8f5a7a9a3c510ef9cbb88e600c0b4c53cdcdb502cfe3eb50040b7e13c6f4e78e" "e1ecb0536abec692b5a5e845067d75273fe36f24d01210bf0aa5842f2a7e029f" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" default)))
  '(package-selected-packages
    (quote
-    (company-lsp add-node-modules-path yard-mode yaml-mode web-mode use-package treemacs-projectile treemacs-magit tide tern spaceline smartparens smart-tabs-mode scss-mode rust-mode rust-auto-use ruby-tools ruby-refactor rubocop rspec-mode rjsx-mode rainbow-mode rainbow-delimiters purescript-mode psc-ide prettier-js paradox org-roam ob-typescript nyan-mode maven-test-mode lsp-ui lsp-java kotlin-mode js2-refactor jest idris-mode haskell-mode groovy-mode groovy-imports graphviz-dot-mode flycheck-rust flycheck-pos-tip flycheck-elm expand-region elm-mode doom-themes direnv darkroom counsel-projectile company-terraform auto-complete)))
+    (rg haml-mode handlebars-mode ember-mode ember-yasnippets company-lsp add-node-modules-path yard-mode yaml-mode web-mode use-package treemacs-projectile treemacs-magit tide tern spaceline smartparens smart-tabs-mode scss-mode rust-mode rust-auto-use ruby-tools ruby-refactor rubocop rspec-mode rjsx-mode rainbow-mode rainbow-delimiters purescript-mode psc-ide prettier-js paradox org-roam ob-typescript nyan-mode maven-test-mode lsp-ui lsp-java kotlin-mode js2-refactor jest idris-mode haskell-mode groovy-mode groovy-imports graphviz-dot-mode flycheck-rust flycheck-pos-tip flycheck-elm expand-region elm-mode doom-themes direnv darkroom counsel-projectile company-terraform auto-complete)))
  '(ruby-refactor-add-parens t)
  '(ruby-refactor-keymap-prefix (kbd "C-c t"))
  '(safe-local-variable-values (quote ((prettier-js-mode quote t) (js2-basic-offset . 4)))))
