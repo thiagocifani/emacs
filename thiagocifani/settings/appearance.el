@@ -3,12 +3,12 @@
 ;;; Code:
 ;;; You will most likely need to adjust this font size for your system!
 
-(defvar thiago/default-font-size 180)
+(defvar thiago/default-font-size 140)
 (defvar thiago/frame-transparency '(90 . 90))
 
 ;; Set frame transparency
-(set-frame-parameter (selected-frame) 'alpha thiago/frame-transparency)
-(add-to-list 'default-frame-alist `(alpha . ,thiago/frame-transparency))
+;;(set-frame-parameter (selected-frame) 'alpha thiago/frame-transparency)
+;;(add-to-list 'default-frame-alist `(alpha . ,thiago/frame-transparency))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -27,16 +27,16 @@
 ;; Set up the visible bell
 (setq visible-bell t)
 
-(set-face-attribute 'default nil :font "Fira Code Retina" :height thiago/default-font-size)
+(set-face-attribute 'default nil :font "Fira Code Bold" :height thiago/default-font-size)
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
 ;; Disable line numbers for some modes
 (dolist (mode '(org-mode-hook
-		term-mode-hook
-		shell-mode-hook
-		eshell-mode-hook))
+                term-mode-hook
+                shell-mode-hook
+                eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 

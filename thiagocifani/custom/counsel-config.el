@@ -20,14 +20,29 @@
   :init
   (ivy-rich-mode 1))
 
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :init
+  ;; NOTE: Set this to the folder where you keep your Git repos!
+  (when (file-directory-p "~/projects")
+    (setq projectile-project-search-path '("~/projects")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
 (use-package counsel
-  :bind (("C-M-j" . 'counsel-switch-buffer)
+  :bind (("M-x" . counsel-M-x)
+         ("C-x b" . counsel-ibuffer)
+         ("C-x C-f" . counsel-find-file)
          :map minibuffer-local-map
-         ("C-r" . 'counsel-minibuffer-history))
-  :custom
-  (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
-  :config
-  (counsel-mode 1))
+         ("C-r" . 'counsel-minibuffer-history)))
+
+(use-package counsel-projectile
+  :after ivy
+  :bind
+  ("C-c p" . projectile-command-map)
+  ("C-c p f" . counsel-projectile-find-file)
+  ("C-c p d" . counsel-projectile-find-dir))
 
 (use-package ivy-prescient
   :after counsel
@@ -37,3 +52,5 @@
   ;; Uncomment the following line to have sorting remembered across sessions!
   (prescient-persist-mode 1)
   (ivy-prescient-mode 1))
+
+;;; counsel-config.el ends here
